@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Build cabinet</h1>
+
+<div>
+    <form method="POST" style="display: flex; flex-direction: column;">
+        {% csrf_token %}
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" />
+        
+        <label for="requires_questions">Requires Questions</label>
+        <input type="checkbox" id="requires_questions" name="requires_questions" />
+        
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+{% endblock %}
